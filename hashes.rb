@@ -1,5 +1,37 @@
 require 'pry'
 
+#what it's supposed to be:
+
+new_hashish = {
+  :ruby => {
+    :type => "interpreted",
+    :style => [:oo]
+  },
+  :javascript => {
+    :type => "interpreted",
+    :style => [:oo, :functional]
+  },
+  :python => {
+    :type => "interpreted",
+    :style => [:oo]
+  },
+  :java => {
+    :type => "compiled",
+    :style => [:oo]
+  },
+  :clojure => {
+    :type => "compiled",
+    :style => [:functional]
+  },
+  :erlang => {
+    :type => "compiled",
+    :style => [:functional]
+  },
+  :scala => {
+    :type => "compiled",
+    :style => [:functional]
+  }
+}
 languages = {
   :oo => {
     :ruby => {
@@ -33,6 +65,9 @@ languages = {
 }
 
 
+
+
+
 def reformat_languages(languages)
   new_hash = {}
   languages.each do |stylez, name|
@@ -53,3 +88,5 @@ def reformat_languages(languages)
   end
   new_hash
 end
+
+reformat_languages(languages)
